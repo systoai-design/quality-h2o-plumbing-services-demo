@@ -60,7 +60,9 @@
             0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
             --text-main: #0f172a;
+            /* Dark Slate - ALWAYS VISIBLE */
             --text-muted: #475569;
+            /* Slate 600 */
             --bg-light: #f8fafc;
         }
 
@@ -249,7 +251,8 @@
         .stats-strip {
             background: var(--primary);
             padding: 60px 0;
-            color: white;
+            color: white !important;
+            /* Force white text on primary bg */
             margin-top: -50px;
             position: relative;
             z-index: 5;
@@ -300,14 +303,17 @@
             margin-top: 60px;
         }
 
+        /* NUCLEAR FIX: Force Dark Text on White Cards */
         .service-card {
-            background: white;
+            background: white !important;
             padding: 40px;
             border-radius: var(--radius);
             border: 1px solid #e2e8f0;
             transition: all 0.3s ease;
             position: relative;
             top: 0;
+            color: #0f172a !important;
+            /* Force Black Text */
         }
 
         .service-card:hover {
@@ -325,11 +331,12 @@
         .service-card h3 {
             font-size: 1.5rem;
             margin-bottom: 12px;
-            color: var(--primary);
+            color: var(--primary) !important;
         }
 
         .service-card p {
-            color: var(--text-muted);
+            color: var(--text-muted) !important;
+            /* Force Grey Text */
             line-height: 1.7;
         }
 
@@ -354,12 +361,14 @@
             justify-content: space-between;
             align-items: center;
             font-size: 1.1rem;
-            color: var(--text-main);
+            color: #0f172a !important;
+            /* Force Black */
         }
 
         .faq-answer {
             padding: 0 24px 24px;
-            color: var(--text-muted);
+            color: #475569 !important;
+            /* Force Grey */
             display: none;
             border-top: 1px solid #f1f5f9;
         }
@@ -413,6 +422,8 @@
             border-radius: var(--radius);
             border: 1px solid #e2e8f0;
             box-shadow: var(--shadow);
+            color: #0f172a !important;
+            /* Force Black */
         }
 
         .testimonial-card .stars {
@@ -422,14 +433,15 @@
 
         .testimonial-card p {
             font-size: 1.1rem;
-            color: var(--text-main);
+            color: #0f172a !important;
+            /* Force Black */
             font-style: italic;
             margin-bottom: 20px;
         }
 
         .testimonial-card .author {
             font-weight: 700;
-            color: var(--primary);
+            color: var(--primary) !important;
         }
 
         footer {
@@ -511,53 +523,53 @@
                 <p>Established</p>
             </div>
         </div>
-        </section>
+    </div>
 
-        <!-- About -->
-        <section class="section">
-            <div class="container about-grid">
-                <div data-aos="fade-right">
-                    <span class="section-tag">About Us</span>
-                    <div class="about-text">
-                        <h2>Your Trusted Partner in Austin</h2>
-                        <p>We are dedicated to providing the best service in the area. Our team is experienced and ready to help.</p>
-                    </div>
-                    <div style="display: flex; gap: 24px; margin-top: 32px; justify-content: center;">
-                        <div>
-                            <div style="font-size: 2rem;">🛡️</div>
-                            <h4>Licensed</h4>
-                        </div>
-                        <div>
-                            <div style="font-size: 2rem;">🤝</div>
-                            <h4>Insured</h4>
-                        </div>
-                        <div>
-                            <div style="font-size: 2rem;">⚡</div>
-                            <h4>Fast</h4>
-                        </div>
-                    </div>
+    <!-- About -->
+    <section class="section">
+        <div class="container about-grid">
+            <div data-aos="fade-right">
+                <span class="section-tag">About Us</span>
+                <div class="about-text">
+                    <h2>Your Trusted Partner in Austin</h2>
+                    <p>We are dedicated to providing the best service in the area. Our team is experienced and ready to help.</p>
                 </div>
-                <div data-aos="fade-left"
-                    style="background: var(--bg-light); padding: 40px; border-radius: var(--radius); border: 1px solid #e2e8f0;">
-                    <h3>Contact us</h3>
-                    <p style="margin-bottom: 8px; color: var(--text-muted);"><strong>📞 Phone:</strong></p>
-                    <p style="font-size: 1.5rem; color: var(--primary); font-weight: 700;">(512) 555-0123</p>
-                    <p style="margin-bottom: 8px; margin-top: 24px; color: var(--text-muted);"><strong>📍
-                            Location:</strong></p>
-                    <p>123 Test St, Austin, TX 78701</p>
+                <div style="display: flex; gap: 24px; margin-top: 32px; justify-content: center;">
+                    <div>
+                        <div style="font-size: 2rem;">🛡️</div>
+                        <h4>Licensed</h4>
+                    </div>
+                    <div>
+                        <div style="font-size: 2rem;">🤝</div>
+                        <h4>Insured</h4>
+                    </div>
+                    <div>
+                        <div style="font-size: 2rem;">⚡</div>
+                        <h4>Fast</h4>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div data-aos="fade-left"
+                style="background: var(--bg-light); padding: 40px; border-radius: var(--radius); border: 1px solid #e2e8f0;">
+                <h3>Contact us</h3>
+                <p style="margin-bottom: 8px; color: var(--text-muted);"><strong>📞 Phone:</strong></p>
+                <p style="font-size: 1.5rem; color: var(--primary); font-weight: 700;">(512) 555-0123</p>
+                <p style="margin-bottom: 8px; margin-top: 24px; color: var(--text-muted);"><strong>📍 Location:</strong>
+                </p>
+                <p>123 Test St, Austin, TX 78701</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- Services -->
-        <section id="services" class="section bg-light">
-            <div class="container">
-                <div style="text-align: center; max-width: 700px; margin: 0 auto 60px;">
-                    <span class="section-tag">Our Services</span>
-                    <h2>Comprehensive Solutions</h2>
-                </div>
-                <div class="services-grid">
-                    
+    <!-- Services -->
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 60px;">
+                <span class="section-tag">Our Services</span>
+                <h2>Comprehensive Solutions</h2>
+            </div>
+            <div class="services-grid">
+                
         <div class="service-card">
             <div class="icon">✨</div>
             <h3>Quality Service</h3>
@@ -594,19 +606,19 @@
             <p>Proudly serving the community.</p>
         </div>
     
-                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Testimonials -->
-        <section class="section">
-            <div class="container">
-                <div style="text-align: center; margin-bottom: 60px;">
-                    <span class="section-tag">Testimonials</span>
-                    <h2>What Your Neighbors Say</h2>
-                </div>
-                <div class="testimonials-grid">
-                    
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <span class="section-tag">Testimonials</span>
+                <h2>What Your Neighbors Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                
         <div class="testimonial-card">
             <div class="stars">★★★★★</div>
             <p>"Great experience!"</p>
@@ -625,18 +637,18 @@
             <div class="author">Jordan M.</div>
         </div>
     
-                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- FAQ -->
-        <section class="section bg-light">
-            <div class="container">
-                <div style="text-align: center; margin-bottom: 40px;">
-                    <h2>Frequently Asked Questions</h2>
-                </div>
-                <div style="max-width: 800px; margin: 0 auto;">
-                    
+    <!-- FAQ -->
+    <section class="section bg-light">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                
         <div class="faq-item">
             <h4 onclick="this.nextElementSibling.classList.toggle('active')">Do you offer quotes?? <span style="float:right">▼</span></h4>
             <div class="faq-answer">Yes, contact us today.</div>
@@ -657,28 +669,28 @@
             <div class="faq-answer">We serve the entire metro area.</div>
         </div>
     
-                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- CTA Bar -->
-        <section class="cta-bar">
-            <div class="container">
-                <h2>Ready to experience the best?</h2>
-                <a href="https://api.leadconnectorhq.com/widget/booking/kpNFVY9l0B37GdzO7srS" class="cta-btn-lg">Get a Free Quote</a>
-            </div>
-        </section>
+    <!-- CTA Bar -->
+    <section class="cta-bar">
+        <div class="container">
+            <h2>Ready to experience the best?</h2>
+            <a href="https://api.leadconnectorhq.com/widget/booking/kpNFVY9l0B37GdzO7srS" class="cta-btn-lg">Get a Free Quote</a>
+        </div>
+    </section>
 
-        <footer>
-            <div class="container">
-                <p>&copy; 2026 Quality H2O Plumbing Services. serving Austin.</p>
-            </div>
-        </footer>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Quality H2O Plumbing Services. serving Austin.</p>
+        </div>
+    </footer>
 
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init({ duration: 800, once: true });
-        </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
 </body>
 
 </html>
